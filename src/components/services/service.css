@@ -1,0 +1,105 @@
+.container.service__container{
+    padding-top: 2rem;
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+}
+.title{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+}
+.title::after{
+    content: '';
+    position: absolute;
+    height: 1.5rem;
+    align-items: center;
+    width: 5px;
+    left: 0;
+    background: var(--color-primary);
+}
+.service__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    position: relative;
+    place-content: center;
+}
+.service__card{
+    place-content: center;
+    place-items: center;
+    width: 20rem;
+    height: 20rem;
+    background-size: cover;
+    background: var(--color-primary);
+    border-radius: 0.7rem;
+}
+.service__card-image{
+    transition: var(--transition);
+    transform: translate(3%, 3%);
+}
+.service__card-image:hover{
+    transform: translate(0);
+}
+.service__card img{
+    aspect-ratio: 1/1;
+    border-radius: 0.7rem;
+    
+}
+.service__card h4{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px){
+    .container.service__container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .service__card-image{
+        transform: translate(2%, 2%);
+    }
+    .service__card{
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 786px){
+    .container.service__container{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .service__card{
+        width: 10rem;
+        height: 10rem;
+    }
+  }
+
+
+@media screen and (max-width: 600px){
+    .container.service__container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .service__cards{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 5rem;
+        position: relative;
+    }
+    .service__card{
+        width: 10rem;
+        height: 10rem;
+    }
+    .service__card h4{
+        margin-top: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .end{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 14rem;
+    }
+  }

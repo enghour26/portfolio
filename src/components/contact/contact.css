@@ -1,0 +1,83 @@
+section{
+    position: relative;
+    padding: 1rem;
+}
+.image__bg{
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.282), rgb(0, 0, 0)),
+    url('../../assets/contact-bg.jpeg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.container.contact__container{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgba(66, 65, 65, 0.282);
+    padding: 1rem 0.8rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(12px);
+    gap: 2rem;
+}
+.reach__me{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    font-size: 0.9rem;
+}
+form{
+    width: 100%;
+}
+input, textarea, button{
+    width: 100%;
+    resize: none;
+    background: transparent;
+    border: 1px solid rgb(155, 155, 155);
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    margin-bottom: .8rem;
+    color: var(--color-white);
+}
+form > h4{
+    margin-bottom: 0.5rem;
+}
+button{
+    display: flex;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-bg);
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px){
+    .container.contact__container{
+        width: 70%;
+        gap: 2rem;
+    }
+    form h4{
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container.contact__container{
+        width: 90%;
+        grid-template-columns: 1fr;
+        margin-top: 5rem;
+    }
+    form{
+        width: 100%;
+    }
+    .reach__me{
+        display: none;
+    }
+}
+

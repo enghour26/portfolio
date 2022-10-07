@@ -1,0 +1,19 @@
+footer{
+    width: 100%;
+    background: var(--color-primary);
+    height: 13vh;
+    border-radius: 1rem 1rem 0 0;
+}
+footer p{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+@media screen and (max-width: 1024px){
+    footer{
+        height: 8vh;
+    }
+}
